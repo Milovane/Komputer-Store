@@ -21,6 +21,9 @@ body {
   overflow: hidden;
   text-align: center;
   padding: 2%;
+  border-style:double;
+  border-color: rgb(61, 61, 61);
+  border-radius: 10px;
 }
 
 .computerImg {
@@ -53,22 +56,24 @@ body {
 
 }
 
-.col-price {
-  position: absolute;
-  top: 175px;
-  right: 0;
-  width: 200px;
-  height: 100px;
- 
-}
-
 .col-desc {
   width: 350px;
   height: 250px;
   margin: 50px;
   display: flex;
   justify-content: center;
+  
+}
 
+.col-price {
+  position: absolute;
+  top: 175px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  font-weight: bold;
+  font-size: 150%
+ 
 }
 
 .title {

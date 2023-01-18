@@ -28,7 +28,7 @@ let computers = [];
 let selectedComputer;
 fetchComputers().then((data) => {
   computers = data;
-  makeComputerSelect();
+  buildComputerSelect();
   changeComputer();
 });
 
@@ -113,7 +113,7 @@ async function fetchComputers() {
     .catch((error) => console.log(error));
 }
 
-function makeComputerSelect() {
+function buildComputerSelect() {
   computers.forEach((computer) => {
     let op = document.createElement("option");
     op.innerText = computer.title;
