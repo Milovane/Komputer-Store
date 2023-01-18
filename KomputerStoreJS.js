@@ -1,6 +1,6 @@
 let balance = 500;
-let currentLoan = 0.0;
-let pay = 0.0;
+let currentLoan = 0;
+let pay = 0;
 
 const balanceElement = document.getElementById("balance");
 const currentLoanElement = document.getElementById("currentLoan");
@@ -24,6 +24,7 @@ document.getElementById("selectbox").addEventListener("change", changeComputer);
 
 const endpoint = "https://hickory-quilled-actress.glitch.me/";
 
+// Fetch computers and run the functions
 let computers = [];
 let selectedComputer;
 fetchComputers().then((data) => {
@@ -34,6 +35,7 @@ fetchComputers().then((data) => {
 
 updateNumbers();
 
+//Function for updating numbers to make it easy to call when needed
 function updateNumbers() {
   balanceElement.innerText = "Balance: " + balance + " kr";
   currentLoanElement.innerText =
@@ -47,6 +49,9 @@ function updateNumbers() {
   }
 }
 
+//1. Bank
+
+//Function to take loan
 function submitLoan() {
   if (currentLoan > 0) {
     alert("You need to repay your previous loan");
@@ -72,6 +77,8 @@ function submitLoan() {
 }
 
 //2. Work
+
+//Function to transfer money to bank
 function transfer() {
   if (pay * 0.1 > currentLoan) {
     balance += pay - currentLoan;
@@ -85,6 +92,7 @@ function transfer() {
   updateNumbers();
 }
 
+//Function to repay active loan
 function repayLoan() {
   if (pay >= currentLoan) {
     pay -= currentLoan;
@@ -96,12 +104,15 @@ function repayLoan() {
   updateNumbers();
 }
 
+//Function for working
 function work() {
   pay += 100;
   updateNumbers();
 }
 
 // 3. Laptop
+
+//Fetching API
 async function fetchComputers() {
   return fetch(endpoint + "/computers")
     .then((res) => {
@@ -113,6 +124,7 @@ async function fetchComputers() {
     .catch((error) => console.log(error));
 }
 
+//Function for making the computer select
 function buildComputerSelect() {
   computers.forEach((computer) => {
     let op = document.createElement("option");
@@ -122,6 +134,7 @@ function buildComputerSelect() {
   });
 }
 
+//Function for showing information on selected computer
 function changeComputer() {
   let selectedID = selectElement.value;
   selectedComputer = computers[selectedID - 1];
@@ -132,6 +145,7 @@ function changeComputer() {
   imgElement.src = endpoint + selectedComputer.image;
 }
 
+//Function for buying computers
 function buyComputer() {
   if (balance >= selectedComputer.price) {
     balance -= selectedComputer.price;

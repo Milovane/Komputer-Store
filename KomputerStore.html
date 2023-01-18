@@ -19,6 +19,7 @@
       />
       <link rel="stylesheet" href="style.css" />
 
+      <!-- Title and header -->
       <title>Komputer Store</title>
     </head>
     <body>
@@ -27,87 +28,95 @@
           <h1>Komputer Store</h1>
         </div>
       </header>
-      <br>
-            <!-- Bank Card -->
+      <br />
 
-            <div class="card" style="width: 23rem">
-              <div class="card-bank">
-                <h5 class="card-title">Bank</h5>
-                <label id="balance">Balance: </label>
-                <label id="currentLoan">Loan amount: </label>
-                <br />
-                <button class="loanBtn" id="loanBtn" href="#" class="btn btn-primary">             
-                  Loan </button>
-                <button class="repayBtn" id="repayBtn" href="#" class="btn btn-primary">
-                  Repay Loan </button>
-              </div>
-            </div>
+      <!-- Bank Card -->
+      <div class="card" style="width: 23rem">
+        <div class="card-bank">
+          <h5 class="card-title">Bank</h5>
+          <label id="balance">Balance: </label>
+          <label id="currentLoan">Loan amount: </label>
+          <br />
+          <button class="loanBtn" id="loanBtn" href="#" class="btn btn-primary">
+            Loan
+          </button>
+          <button
+            class="repayBtn"
+            id="repayBtn"
+            href="#"
+            class="btn btn-primary"
+          >
+            Repay Loan
+          </button>
+        </div>
+      </div>
 
-            <!-- Work Card -->
-            <div class="card" style="width: 23rem">
-              <div class="card-work">
-                <h5 class="card-title">Work</h5>
-                <label id="pay">Pay: </label>
-                <br />
-                <button class="workBtn" id="workBtn" href="#" class="btn btn-primary")>
-                  Work
-                </button>
-                <button class="transferBtn" id="transferBtn" href="#" class="btn btn-primary">
-                  Transfer to bank
-                </button>
-              </div>
-            </div>
-            </div>
+      <!-- Work Card -->
+      <div class="card" style="width: 23rem">
+        <div class="card-work">
+          <h5 class="card-title">Work</h5>
+          <label id="pay">Pay: </label>
+          <br />
+          <button
+            class="workBtn"
+            id="workBtn"
+            href="#"
+            class="btn btn-primary"
+            )
+          >
+            Work
+          </button>
+          <button
+            class="transferBtn"
+            id="transferBtn"
+            href="#"
+            class="btn btn-primary"
+          >
+            Transfer to bank
+          </button>
+        </div>
+      </div>
+      <br />
 
-            <br>
+      <!-- Computer select card -->
+      <div class="card" style="width: 23rem">
+        <div class="card-computer">
+          <h5 class="card-title">Computer:</h5>
+          <select class="form-control" id="selectbox"></select>
+          <br />
+          <p class="specs" id="specs">Features:</p>
+        </div>
+      </div>
 
-            <!-- Computer select card -->
-            <div class="card" style="width: 23rem">
-              <div class="card-computer">
-                <h5 class="card-title">Computer:</h5>
+      <!-- Computer information card -->
+      <div class="card" style="width: 50rem; height: 20rem">
+        <div class="card-computer">
+          <button
+            class="computerBtn"
+            id="buyComputerBtn"
+            href="#"
+            class="btn btn-primary"
+          >
+            Buy computer
+          </button>
+          <h5 class="title" id="title">Classic Notebook</h5>
+          <img
+            class="computerImg"
+            src=""
+            id="image"
+            alt="NOPE"
+            width="200"
+            height="185"
+          />
+        </div>
+        <div class="col-price">
+          <h3 class="price" id="price">Price:</h3>
+        </div>
+        <div class="col-desc">
+          <p class="description" id="description">Description:</p>
+        </div>
+      </div>
 
-                <select class="form-control" id="selectbox"></select>
-                <br>    
-                <p class="specs" id="specs">Features:</p>
-              </div>
-            </div>
-          </div>
-
-            <!-- Computer information card -->
-      
-                  <div class="card" style="width: 50rem; height: 20rem">
-                    <div class="card-computer">
-                      <button
-                        class="computerBtn"
-                        id="buyComputerBtn"
-                        href="#"
-                        class="btn btn-primary"
-                      >
-                        Buy computer
-                      </button>
-                      <h5 class="title" id="title">Classic Notebook</h5>
-                      <img
-                        class="computerImg"
-                        src=""
-                        id="image"
-                        alt="NOPE"
-                        width="200"
-                        height="185"
-                      /> </div>
-                      <div class="col-price">
-                      <h3 class="price" id="price">Price:</h3>
-                    </div>
-                      <div class="col-desc">
-                        <p class="description" id="description">Description:</p>
-                  
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-      
       <script type="text/javascript" src="KomputerStoreJS.js"></script>
     </body>
   </html>
