@@ -127,7 +127,7 @@ function changeComputer() {
   selectedComputer = computers[selectedID - 1];
   titleElement.innerText = selectedComputer.title;
   descriptionElement.innerText = "Features: " + selectedComputer.description;
-  priceElement.innerText = "Price:" + selectedComputer.price;
+  priceElement.innerText = "Price: " + selectedComputer.price;
   specsElement.innerText = selectedComputer.specs;
   imgElement.src = endpoint + selectedComputer.image;
 }
